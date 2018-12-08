@@ -1,0 +1,32 @@
+<script type="text/javascript" src="./jsp/imageSlide.js"></script>
+
+<div class="index_left" >
+<div class="slideshow-container">
+<div class="imgSlides">
+<a href="/festival/goyang"><img src="../img/festival_2.png" ></a>
+</div>
+
+<div class="imgSlides">
+<a href="/festival/hanrim"><img src="../img/festival_1.png"></a>
+</div>
+
+<div class="imgSlides">
+<a href="/festival/hwasun"><img src="../img/festival_3.png"></a>
+</div>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+</div>
+</div>
+
+<div class="index_right" >
+<h2> AUTTUMN </h2>
+<a href="/season/autumn"><img id="index_img" src="../img/11.png" ></a>
+<h2> NOVEMBER </h2>
+</div>
+<div id="blank">
+<br><br><br><br><br><br><br><br><br><br><br>
+</div>

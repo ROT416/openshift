@@ -1,0 +1,283 @@
+
+/* 하이퍼링크 */
+a {
+  background: linear-gradient(to right, #EB9A86, #EB87A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+
+.a_box:hover a{
+  background: none;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.a_box:hover{
+  background: linear-gradient(to right, #EB9A86, #EB87A6);
+}
+
+.header a{
+  background: none;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.imgSlides img {
+  height:auto;
+  width: 100%;
+}
+
+/* 배경 이미지 반복  */
+html {
+ background: url(../img/sakura.png) repeat;
+}
+
+
+.index_left{
+  display: grid;
+  float: left;
+  width:70%;
+  padding: 20px;
+}
+.index_right{
+  display: grid;
+  float: right;
+  width:22%;
+  padding: 20px;
+}
+#index_img {
+  width:100%;
+}
+
+
+
+/* 사이트 제목 */
+h1 {
+  font-size: 55px;
+  text-align: center;
+
+  width:1000px;
+  display: block;
+  padding: 30px;
+  margin-top: 44px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Nanum Gothic;
+
+}
+
+
+
+
+/* 메인 메뉴 */
+li{
+  font-size: 16px;
+  text-align: center;
+  display:inline-block;
+
+  color:black;
+  font-weight:bold;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family:Nanum Gothic;
+}
+
+ol {
+  display: block;
+  width:1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+
+  background-image: url(../img/bg.png) ;
+  background-size: auto;
+}
+
+
+
+
+/* 본문 */
+#article{
+  color: #3C3C3C;
+  text-align: center;
+  width:1000px;
+
+  line-height:2.3em;
+  font-family:Nanum Gothic;
+  margin: auto;
+  background-image: url(../img/white1.png) ;
+  background-size: auto;
+}
+
+h2 {
+  background: linear-gradient(to right, #EB9A86, #EB87A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+/*하위 페이지 구현*/
+.sub_page {
+  background: none;
+  width:auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0px;
+  border: none;
+}
+
+.sub_page li {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-left: 0.5px solid white;
+  border-right: 0.5px solid white;
+  margin-bottom: 30px;
+  display: block;
+}
+
+#sub_menu {
+  display: block;
+  float: left;
+  width:15%;
+  height: 500px;
+}
+
+#sub_article {
+  display: block;
+  float: left;
+  width:85%;
+  height: auto;
+  padding-top : 35px;
+  background-image: url(../img/white1.png) ;
+  background-size: auto;
+}
+
+
+
+
+/* 배경 이미지 */
+#bg {
+  top: 0; /*이미지의 초기 좌표*/
+  left: 0;
+  position: fixed; /*이미지 좌표 고정*/
+  z-index: -1; /* 이미지를 글 뒤로 */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+/* 본문 안 이미지 */
+.article_img {
+  text-align: center;
+}
+
+
+
+/*덧글창 */
+.reply {
+  text-align: left;
+  background-image: url(../img/white.png) ;
+  background-size: auto;
+  border: 1px solid #D2D2D2;
+
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+/* 모바일 버전 */
+@media(max-width:1000px){
+  h1 {
+    font-size: 40px;
+    width: auto;
+    margin-top: 44px;
+    margin-bottom: 36px;
+  }
+  li {
+      padding-left:16px;
+      padding-right:16px;
+  }
+  ol, #article{
+    width:100%;
+  }
+
+  h2 {
+    color: black;
+    font-size: 24px;
+  }
+
+  #sub_menu {
+    display: inline;
+    width:100%;
+    height: auto;
+  }
+  #sub_article {
+    display: inline;
+    width:100%;
+    height: auto;
+  }
+
+  .sub_page ol, .sub_page li{
+    display: inline-block;
+    width:auto;
+  }
+
+  .index_left{
+    display: inline;
+    width:100%;
+    float: none;
+  }
+
+  .index_left img{
+    width:90%;
+  }
+
+  .index_right{
+    display: inline;
+    width:80%;
+    float: none;
+  }
+
+  #index_img {
+    width:40%;
+  }
+
+  #blank {
+    display: none;
+  }
+
+}
