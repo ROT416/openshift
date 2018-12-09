@@ -7,11 +7,13 @@ var template = require('./lib/template.js');
 app.use(express.static("public"));
 var db = require('./lib/db');
 
+//코드 파일
+var topic= require('./lib/topic.js');//메인, 상하위 페이지 출력 코드
+var process = require('./lib/process');//회원가입, 로그인, 덧글 작성, 삭제 프로세스 코드
+
+//세션 파일
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
-
-var topic= require('./lib/topic.js');
-var process = require('./lib/process');
 
 app.use(session({
   secret: 'asadlfkj!@#!@#dfgasdg',
@@ -26,9 +28,11 @@ app.get('/', function(request, response) {
   topic.home(request, response);
 });
 
+
+
 //상위페이지
 app.get('/:mainpageId/', function (request, response) {
-  var mId = request.params.mainpageId;
+  var mId = request.params.mainpageId;//상위 페이지 주소
   if(mId.match(/.\../)==null ){
     console.log(mId);
     topic.mainpage(request, response, mId);
@@ -37,9 +41,12 @@ app.get('/:mainpageId/', function (request, response) {
 
 //하위페이지
 app.get('/:mainpageId/:subpageId/', function (request, response) {
-  console.log(request.params.subpageId);
+  console.log(request.params.subpageId);//하위 페이지 주소
   topic.subpage(request, response);
 });
+
+
+
 
 
 
